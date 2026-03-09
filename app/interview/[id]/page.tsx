@@ -127,7 +127,7 @@ export default function InterviewRoom() {
                   </div>
                 </div>
                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-                    {candidate?.candidate_name || "New Candidate"}
+                    {candidate?.name || "New Candidate"}
                 </h2>
                 <p className="text-[11px] font-black text-indigo-600 uppercase tracking-widest mt-1">Oral Exam Mode</p>
               </CardContent>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Mic, Github, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 
 export const Footer = () => (
-  <footer className="relative mt-20 pb-12 px-6 overflow-hidden">
+  <footer className="relative mt-20  px-6 overflow-hidden">
     {/* Subtle Mesh Gradient Background */}
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-indigo-50/40 via-transparent to-transparent -z-10" />
 
@@ -69,21 +69,7 @@ export const Footer = () => (
       </div>
 
       {/* --- BOTTOM SECTION: LEGAL & CREDITS --- */}
-      <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-100 gap-6">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-            Systems Operational // 2026 Prepr AI
-          </p>
-        </div>
-        
-        <div className="flex items-center gap-1 group cursor-pointer">
-          <span className="text-xs font-bold text-slate-400 group-hover:text-slate-600 transition-colors uppercase">
-            Designed by Sahaj Rajput
-          </span>
-          <ArrowUpRight className="w-3 h-3 text-slate-400 group-hover:text-indigo-600 group-hover:-translate-y-0.5 transition-all" />
-        </div>
-      </div>
+     
     </div>
   </footer>
 );

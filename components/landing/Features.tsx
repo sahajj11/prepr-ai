@@ -18,7 +18,7 @@ export const Features = () => {
   const sliderItems = [...features, ...features, ...features];
 
   return (
-    <section id="features" className="py-32 relative overflow-hidden bg-white">
+    <section id="features" className=" relative overflow-hidden bg-white">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-50/40 via-transparent to-transparent -z-10" />
 

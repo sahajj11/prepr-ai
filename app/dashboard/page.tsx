@@ -123,12 +123,12 @@ export default function Dashboard() {
                         <div className="flex items-center gap-4">
                           <Avatar className="size-11 border-2 border-slate-50 shadow-sm">
                              <AvatarFallback className="bg-slate-900 text-[10px] font-black text-white uppercase tracking-tighter">
-                               {interview.candidate_name?.substring(0, 2)}
+                               {interview.name?.substring(0, 2)}
                              </AvatarFallback>
                           </Avatar>
                           <div>
-                            <p className="font-bold text-sm text-slate-900 group-hover:text-indigo-600 transition-colors">{interview.candidate_name}</p>
-                            <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-tighter">{interview.candidate_role}</p>
+                            <p className="font-bold text-sm text-slate-900 group-hover:text-indigo-600 transition-colors">{interview.name}</p>
+                            <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-tighter">{interview.role_title}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-6">
@@ -153,6 +153,9 @@ export default function Dashboard() {
             </CardContent>
           </Card>
         </div>
+
+       
+       
       </main>
     </div>
   );
