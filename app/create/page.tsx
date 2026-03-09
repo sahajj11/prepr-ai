@@ -87,7 +87,7 @@ export default function CreateInterview() {
   return (
     <div className="min-h-screen bg-[#f8fafc] text-slate-900 relative overflow-hidden">
       {/* Background Orbs */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-indigo-50 to-transparent -z-10" />
+       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-indigo-50 to-transparent -z-10" />
       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-50/50 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 py-12 lg:py-20">
@@ -112,10 +112,10 @@ export default function CreateInterview() {
         {/* Header Section */}
         <div className="mb-12">
           <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Configure Your <span className="text-indigo-600">Oral Exam.</span>
+            Configure Your <span className="text-indigo-600">Interview.</span>
           </h1>
           <p className="text-slate-500 mt-4 text-lg font-medium max-w-2xl">
-            Upload your material and let Prepr AI generate a customized questioning strategy.
+            Upload your resume and let Prepr AI generate a customized questioning strategy.
           </p>
         </div>
 
@@ -124,13 +124,13 @@ export default function CreateInterview() {
           
           {/* LEFT: The Main Form (7 Cols) */}
           <div className="lg:col-span-7 space-y-8">
-            <Card className="bg-white border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2.5rem] overflow-hidden">
+            <Card className="bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-[2.5rem] overflow-hidden">
               <CardContent className="p-8 lg:p-10 space-y-8">
                 
                 {/* Field: Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <Label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-400">Student Name</Label>
+                    <Label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-400">Name</Label>
                     <div className="relative group">
                       <User className="absolute left-4 top-1/2 -translate-y-1/2 size-4 text-slate-400 group-focus-within:text-indigo-600 transition-colors" />
                       <Input 
@@ -175,7 +175,7 @@ export default function CreateInterview() {
 
                 {/* Field: Upload Area */}
                 <div className="space-y-3">
-                   <Label className="text-xs font-black uppercase tracking-widest text-slate-400">Material Selection</Label>
+                   <Label className="text-xs font-black uppercase tracking-widest text-slate-400">Resume Upload</Label>
                    <div 
                     onClick={() => fileInputRef.current?.click()} 
                     className={`group relative overflow-hidden border-2 border-dashed rounded-[2rem] p-10 flex flex-col items-center justify-center gap-4 transition-all cursor-pointer ${
@@ -192,7 +192,7 @@ export default function CreateInterview() {
 
                     <div className="text-center">
                        <p className="font-black text-slate-900 tracking-tight">
-                         {isParsing ? "Reading Document..." : formData.resume ? "Material Processed" : "Upload Exam Material"}
+                         {isParsing ? "Reading Document..." : formData.resume ? "Resume Processed" : "Upload Resume"}
                        </p>
                        <p className="text-xs font-bold text-slate-400 mt-1">PDF documents only (Max 5MB)</p>
                     </div>
@@ -248,7 +248,7 @@ export default function CreateInterview() {
             </Card>
 
             {/* Bento Tip 2: Quick Steps */}
-            <Card className="bg-white border-slate-200/60 rounded-[2.5rem] p-8 shadow-sm">
+            <Card className="bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-[2.5rem] p-8 shadow-sm">
                <div className="space-y-8">
                   <div className="flex gap-4">
                      <div className="size-10 rounded-xl bg-slate-900 text-white flex items-center justify-center shrink-0 font-black">1</div>

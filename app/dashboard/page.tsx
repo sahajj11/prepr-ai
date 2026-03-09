@@ -32,21 +32,32 @@ export default function Dashboard() {
   }, []);
 
   return (
-    // Changed bg-white to a very subtle slate-50 to make cards pop
+    <>
+
+    <DashboardNavbar />
+    
+     {/* Changed bg-white to a very subtle slate-50 to make cards pop */}
     <div className="min-h-screen bg-[#fcfcfd] relative overflow-hidden p-8 pt-28">
 
-      <DashboardNavbar />
+     
       
       {/* Background Decorative Gradients - Enhanced Opacity */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-indigo-100/30 to-transparent -z-10" />
+      
       <div className="absolute top-[10%] right-[-5%] w-[500px] h-[500px] bg-blue-100/40 blur-[140px] rounded-full -z-10" />
+
+       
       <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-indigo-100/40 blur-[120px] rounded-full -z-10" />
+      
+      
 
       <main className="grid grid-cols-1 mt-4 lg:grid-cols-12 gap-8 max-w-7xl mx-auto relative z-10">
+
+       
         
         {/* --- LEFT CARD: 5-column span --- */}
         <div className="lg:col-span-5">
-          <Card className="h-full bg-white/80 backdrop-blur-2xl border border-slate-200/60 shadow-[0_20px_50px_rgba(79,70,229,0.05)] rounded-[2.5rem] overflow-hidden">
+          <Card className="h-full bg-white/80 backdrop-blur-2xl border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-[2.5rem] overflow-hidden">
             <CardHeader className="pb-2 border-b border-slate-100/50 bg-white/30">
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
@@ -54,8 +65,8 @@ export default function Dashboard() {
                     <Sparkles className="size-4 text-indigo-600" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-black text-slate-900 tracking-tight">Recruiter Lab</h2>
-                    <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Mark Zuck AI</p>
+                    <h2 className="text-xl font-black text-slate-900 tracking-tight">AI Interviewer</h2>
+                    <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Mark Zuck</p>
                   </div>
                 </div>
                 <Badge className="bg-emerald-50 text-emerald-600 border-none text-[10px] font-bold px-3 py-1">Online</Badge>
@@ -72,7 +83,7 @@ export default function Dashboard() {
               </div>
               
               <div className="text-center space-y-3">
-                <h3 className="text-2xl font-black text-slate-900">Conduct Oral Exam</h3>
+                <h3 className="text-2xl font-black text-slate-900">Conduct an Interview</h3>
                 <p className="text-slate-500 text-sm max-w-[280px] font-medium leading-relaxed">
                   Start an AI-powered voice session to assess technical and communication skills instantly.
                 </p>
@@ -90,10 +101,10 @@ export default function Dashboard() {
 
         {/* --- RIGHT CARD: 7-column span --- */}
         <div className="lg:col-span-7">
-          <Card className="bg-white/50 backdrop-blur-md border border-slate-200/60 shadow-xl rounded-[2.5rem] flex flex-col h-full">
+          <Card className="bg-white/50 backdrop-blur-md border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-[2.5rem] flex flex-col h-full">
             <CardHeader className="pb-6">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <CardTitle className="text-xl font-black text-slate-900">Past Sessions</CardTitle>
+                <CardTitle className="text-xl font-black text-slate-900">Past Interviews</CardTitle>
                 <div className="relative w-full md:w-64 group">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors" />
                   <input 
@@ -158,5 +169,7 @@ export default function Dashboard() {
        
       </main>
     </div>
+
+    </>
   );
 }

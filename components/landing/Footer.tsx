@@ -2,7 +2,7 @@ import React from 'react';
 import { Mic, Github, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 
 export const Footer = () => (
-  <footer className="relative mt-20  px-6 overflow-hidden">
+  <footer className="relative   px-6 overflow-hidden">
     {/* Subtle Mesh Gradient Background */}
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-indigo-50/40 via-transparent to-transparent -z-10" />
 
