@@ -3,7 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 
 // Define which routes are public (Landing page, etc.)
-const isPublicRoute = createRouteMatcher(['/', '/landing(.*)']);
+const isPublicRoute = createRouteMatcher(['/', '/landing(.*)','/api/webhook/vapi']);
 
 export default clerkMiddleware((auth, request) => {
   if (!isPublicRoute(request)) {

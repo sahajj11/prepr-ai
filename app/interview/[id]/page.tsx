@@ -67,6 +67,7 @@ export default function InterviewRoom() {
 
     if (isCalling) {
       vapi.stop();
+      
     } else {
       vapi.start(assistantId, {
         variableValues: {
@@ -118,7 +119,7 @@ export default function InterviewRoom() {
           
           {/* --- LEFT: CANDIDATE DOSSIER (4 Cols) --- */}
           <div className="lg:col-span-4 space-y-6">
-            <Card className="bg-white border-slate-200/60 shadow-xl shadow-slate-200/50 rounded-[2.5rem] overflow-hidden">
+            <Card className="bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] shadow-slate-200/50 rounded-[2.5rem] overflow-hidden">
               <CardContent className="pt-10 pb-8 flex flex-col items-center text-center">
                 <div className="size-24 rounded-[2rem] bg-gradient-to-br from-slate-100 to-slate-50 border-2 border-white shadow-inner flex items-center justify-center mb-6 relative">
                   <User className="text-slate-400 size-10" />
@@ -133,7 +134,7 @@ export default function InterviewRoom() {
               </CardContent>
             </Card>
             
-            <div className="p-8 rounded-[2rem] bg-white border border-slate-200/60 shadow-sm relative overflow-hidden group">
+            <div className="p-8 rounded-[2rem] bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-1 h-full bg-indigo-600 opacity-20" />
               <div className="flex items-center gap-2 mb-4">
                  <Info className="size-3 text-slate-400" />
@@ -147,7 +148,7 @@ export default function InterviewRoom() {
 
           {/* --- RIGHT: INTERVIEW ENGINE (8 Cols) --- */}
           <div className="lg:col-span-8">
-            <Card className="bg-white border-slate-200/60 shadow-2xl shadow-indigo-100/30 rounded-[3rem] py-16 flex flex-col items-center justify-center relative overflow-hidden">
+            <Card className="bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] shadow-indigo-100/30 rounded-[3rem] py-16 flex flex-col items-center justify-center relative overflow-hidden">
               
               {/* Background Animated Wave Decor */}
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none">

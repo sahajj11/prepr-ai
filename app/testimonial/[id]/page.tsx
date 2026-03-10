@@ -112,7 +112,7 @@ export default function TestimonialPage() {
 
           {/* AI Generated Testimonial */}
           <section>
-            <Card className="bg-white border-slate-200/60 shadow-xl rounded-[3rem] relative overflow-hidden group">
+            <Card className="bg-white border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.4)] rounded-[3rem] relative overflow-hidden group">
                <Quote className="absolute -top-6 -right-6 size-44 text-slate-50 opacity-[0.03] rotate-12 group-hover:opacity-[0.05] transition-opacity" />
                <CardHeader className="pt-10 px-10">
                  <CardTitle className="text-indigo-600 text-[11px] uppercase tracking-[0.3em] font-black flex items-center gap-3">

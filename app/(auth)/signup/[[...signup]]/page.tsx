@@ -60,14 +60,7 @@ export default function SignupPage() {
           }}
         />
       </div>
-
-      {/* Login Link for existing users */}
-      <p className="mt-8 text-sm text-slate-500 font-medium">
-        Already have an account?{' '}
-        <a href="/sign-in" className="text-indigo-600 font-bold hover:underline">
-          Sign In
-        </a>
-      </p>
+      
     </div>
   );
 }

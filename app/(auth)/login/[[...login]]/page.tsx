@@ -58,10 +58,8 @@ export default function LoginPage() {
         />
       </div>
 
-      {/* Footer Credit */}
-      <p className="absolute bottom-10 text-xs font-bold text-slate-400 uppercase tracking-widest">
-        Secure Authentication by Clerk
-      </p>
+    
+     
     </div>
   );
 }
