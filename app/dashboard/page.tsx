@@ -31,6 +31,24 @@ export default function Dashboard() {
     fetchInterviews();
   }, []);
 
+  const handleInterviewClick = async (interviewId: string) => {
+  try {
+    // 1. Trigger the analysis API (Fire and forget or await)
+    // We call it here so that by the time the page loads, the data is ready or being updated
+    fetch("/api/generate-summary", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ interviewId }),
+    }).catch(err => console.error("Analysis trigger failed:", err));
+
+    // 2. Navigate to the testimonial page
+    router.push(`/testimonial/${interviewId}`);
+  } catch (error) {
+    console.error("Error:", error); 
+    router.push(`/testimonial/${interviewId}`);
+  }
+};
+
   return (
     <>
 
@@ -128,7 +146,7 @@ export default function Dashboard() {
                     interviews.map((interview) => (
                       <div 
                         key={interview.id} 
-                        onClick={() => router.push(`/testimonial/${interview.id}`)}
+                        onClick={() => handleInterviewClick(interview.id)}
                         className="flex items-center justify-between p-4 rounded-2xl bg-white border border-slate-100 hover:border-indigo-200 hover:shadow-lg hover:shadow-indigo-50/50 transition-all cursor-pointer group"
                       >
                         <div className="flex items-center gap-4">

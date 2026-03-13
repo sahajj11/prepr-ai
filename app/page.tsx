@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       
       <div className="relative z-10">
-        <Hero />
+        <Hero />    
         <Features />
         
         {/* You can add a 'How it Works' or 'CTA' component here later */}

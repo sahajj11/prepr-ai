@@ -83,7 +83,7 @@ export default function TestimonialPage() {
                 {data?.candidate_name}
               </h1>
               <p className="text-slate-500 font-medium flex items-center gap-2">
-                Assessment for <span className="text-slate-900 font-bold border-b-2 border-indigo-200 pb-0.5">{data?.candidate_role || "Technical Role"}</span>
+                Assessment for <span className="text-slate-900 font-bold border-b-2 border-indigo-200 pb-0.5">{data?.role_title || "Technical Role"}</span>
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function TestimonialPage() {
               <div className="text-center">
                 <p className="text-slate-400 text-[10px] uppercase tracking-widest mb-2 font-black">Performance Score</p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-black text-indigo-600 tracking-tighter">{data?.overall_score || "0"}</span>
+                  <span className="text-5xl font-black text-indigo-600 tracking-tighter">{data?.scorecard || "0"}</span>
                   <span className="text-slate-300 font-bold text-xl">/5</span>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function TestimonialPage() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star 
                       key={star} 
-                      className={`size-5 ${star <= Math.round(data?.overall_score || 0) ? 'text-indigo-500 fill-indigo-500' : 'text-slate-100'}`} 
+                      className={`size-5 ${star <= Math.round(data?.scorecard || 0) ? 'text-indigo-500 fill-indigo-500' : 'text-slate-100'}`} 
                     />
                   ))}
                 </div>
@@ -121,7 +121,7 @@ export default function TestimonialPage() {
                </CardHeader>
                <CardContent className="px-10 pb-12">
                  <p className="text-2xl leading-[1.6] font-medium text-slate-800 tracking-tight italic">
-                    &quot;{data?.testimonial_summary || "Our AI agent is currently finalizing the performance analysis. Please refresh in a moment..."}&quot;
+                    &quot;{data?.feedback_summary || "Our AI agent is currently finalizing the performance analysis. Please refresh in a moment..."}&quot;
                  </p>
                </CardContent>
             </Card>
