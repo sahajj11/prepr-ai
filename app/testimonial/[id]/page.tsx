@@ -41,7 +41,22 @@ export default function TestimonialPage() {
     fetchInterviewData();
   }, [id]);
 
+  console.log("DEBUG DATA:", {
+    summaryType: typeof data?.feedback_summary,
+    transcriptType: typeof data?.transcript,
+    summaryValue: data?.feedback_summary,
+    transcriptValue: data?.transcript
+  });
+
   if (loading) return <TestimonialSkeleton />;
+
+  if (!data) {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <p className="text-slate-500 font-bold">No interview record found.</p>
+    </div>
+  );
+}
 
   return (
     <div className="min-h-screen bg-[#fcfcfd] text-slate-900 relative overflow-hidden p-6 lg:p-12">
@@ -91,7 +106,7 @@ export default function TestimonialPage() {
               <div className="text-center">
                 <p className="text-slate-400 text-[10px] uppercase tracking-widest mb-2 font-black">Performance Score</p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-black text-indigo-600 tracking-tighter">{data?.scorecard || "0"}</span>
+                  <span className="text-5xl font-black text-indigo-600 tracking-tighter">{data?.overall_score || "0"}</span>
                   <span className="text-slate-300 font-bold text-xl">/5</span>
                 </div>
               </div>
@@ -101,7 +116,7 @@ export default function TestimonialPage() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star 
                       key={star} 
-                      className={`size-5 ${star <= Math.round(data?.scorecard || 0) ? 'text-indigo-500 fill-indigo-500' : 'text-slate-100'}`} 
+                      className={`size-5 ${star <= Math.round(typeof data?.scorecard === 'number' ? data.scorecard : "0") ? 'text-indigo-500 fill-indigo-500' : 'text-slate-100'}`} 
                     />
                   ))}
                 </div>

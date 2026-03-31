@@ -162,7 +162,7 @@ export default function Dashboard() {
                         </div>
                         <div className="flex items-center gap-6">
                            <div className="text-right">
-                              <p className="text-xs font-black text-slate-900">{interview.overall_score || "0"}/5</p>
+                              {/* <p className="text-xs font-black text-slate-900">{interview.overall_score || "0"}/5</p> */}
                               <div className="h-1 w-12 bg-slate-100 rounded-full mt-1 overflow-hidden">
                                 <div 
                                   className="h-full bg-indigo-500" 
